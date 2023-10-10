@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Research Data</title>
+</head>
+<body>
+ <table>
+      <th>Name</th><th>Phone</th><th>Registered Hour</th><th>Registered Day</th>
+        <% people.keys.each do |id| %>
+        <tr>
+          <td><%= "#{people.dig(id,:name)}" %></td>
+          <td><%= "#{people.dig(id,:phone)}" %></td>
+          <td><%= "#{people.dig(id,:hour)}" %></td> 
+          <td><%= "#{people.dig(id,:day)}" %></td>
+        </tr>
+        <% end %>
+  </table>
+</body>
+</html>
